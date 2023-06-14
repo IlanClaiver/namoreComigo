@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+</head>
+
+
+<body>
+    <div id="conteudo">
+        <h2>Aceita namorar comigo?</h2>
+        <button onclick="sim()">SIM</button>
+        <button onmouseover="desvia(this)">NÃO</button>
+
+    </div>
+</body>
+
+<style>
+    #conteudo{
+    background: #f74343;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    }
+</style>
+
+<script>
+    function sim(){
+        alert("Voce aceitou namorar comigo! :)")
+    }
+
+    function desvia(t){
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosition(10, 90);
+        btn.style.left = geraPosition(10, 90);;
+        console.log("Vai aceitar não? KKKKKK")
+    }
+
+    function geraPosition(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
